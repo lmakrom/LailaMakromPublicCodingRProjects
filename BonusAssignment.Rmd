@@ -7,5 +7,7 @@ date: "2025-11-30"
 ```{r}
 data("ChickWeight")
 
-plot(ChickWeight$Time,ChickWeight$weight)#this plots all chicks against time and weight for all diet types
+only.chick1.diet1<-ChickWeight[ChickWeight$Chick==1 & ChickWeight$Diet==1,#only grab the data for chick 1 and diet 1 for time vs. weight plot
+                               ]
+plot(only.chick1.diet1$Time,only.chick1.diet1$Weight)#this plots only time vs. weight for chick 1 on diet 1
 ```
