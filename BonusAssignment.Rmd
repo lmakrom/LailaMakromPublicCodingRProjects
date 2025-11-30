@@ -9,5 +9,7 @@ data("ChickWeight")
 
 only.chick1.diet1<-ChickWeight[ChickWeight$Chick==1 & ChickWeight$Diet==1,#only grab the data for chick 1 and diet 1 for time vs. weight plot
                                ]
-plot(only.chick1.diet1$Time,only.chick1.diet1$Weight)#this plots only time vs. weight for chick 1 on diet 1
+plot(only.chick1.diet1$Time,only.chick1.diet1$Weight,pch=8)#this plots only time vs. weight for chick 1 on diet 1
+
+lines(only.chick1.diet1$Time,only.chick1.diet1$Weight,col="red")
 ```
